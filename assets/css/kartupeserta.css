@@ -1,0 +1,176 @@
+/* 
+    Document   : kartupeserta
+    Created on : Oct 1, 2015, 11:04:23 PM
+    Author     : imamz
+    Description:
+        Purpose of the stylesheet follows.
+*/
+h2,h3, h4{margin: 0;padding: 0;}
+.page{
+    font-family: Arial, Helvetica, sans-serif;    
+    margin: 0 auto;
+    width: 21cm;
+    height: auto;
+    color: #000;
+}
+.container{
+    width: 19cm;
+    height: 100%;
+}
+.containeradm{width: 19cm;height: 100%;font-size:14px;}
+#header{
+    height: 1.8cm;
+    text-align: center;
+    border-bottom: solid #000 2px;
+}
+#headertest{
+    height: 2.2cm;
+    text-align: center;
+    border-bottom: solid #000 2px;
+}
+.kiri{    
+    width: 14.3cm;
+}
+img.fotopeserta{
+    width: 65%;
+    border: solid #000 1px;
+    padding: 2px;    
+}
+img.fotopesertaujian{
+    width: 65%;
+    border: solid #000 1px;
+    padding: 2px;    
+}
+.line{
+    height: 0.2cm;
+    width: 100%;
+    border-top: solid #000 1px;
+}
+
+#footer{
+    clear: left;
+    width: 100%;
+}
+
+#footer a{
+    color: #FFFF80;
+}
+.table {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.table th,
+.table td {
+    padding:  0px 8px;
+    line-height: 15px;
+    text-align: left;
+    vertical-align: middle;
+    border-top: 1px solid #000;
+}
+
+.table th {
+    font-weight: bold;
+}
+
+.table thead th {
+    vertical-align: middle;
+}
+
+.table .table {
+    background-color: #ffffff;
+}
+.table-condensed th{
+    text-align: center;
+}
+.table-condensed th,
+.table-condensed td {
+    padding: 2px;
+}
+
+.table-bordered {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid #000;
+    border-collapse: separate;
+    *border-collapse: collapse;
+    border-left: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border-left: 1px solid #000;
+}
+.table-noborder {
+    border: none;
+    border-collapse: separate;
+    *border-collapse: collapse;
+    border-left: 0;
+}
+.table-noborder td {
+    padding:  0px 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: middle;
+    border-top: none;
+}
+.table-peserta {
+    border: none;
+    border-collapse: separate;
+    *border-collapse: collapse;
+    border-left: 0;
+}
+.table-peserta td {
+    padding:  0px 8px;
+    line-height: 25px;
+    text-align: left;
+    vertical-align: top;
+    border-top: none;
+}
+.kolomfoto{width: 1cm;}
+.description{width: 4cm;}
+.tanda{width: 0.2cm;}
+.detail{width: 9.5cm;}
+.no{width: 0.5cm;}
+.ada{width: 2.5cm;}
+.contentada{text-align: center;}
+.centertext{text-align: center;}
+.textsmall{font-size: 11px;}
+.text-md{font-size: 14px;}
+hr.batas{
+    height: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    margin: 0px;
+    border: 0;
+    border-top: #000 dashed 2px;
+}
+.wrapper{height: 45mm;width: 100%;}
+.wrapper-dua{height: 17mm;width: 100%;}
+.wrapper-empat{height: 29mm;width: 100%;}
+u{border-bottom: solid 1px #000;}
+.wrapper-tiga{height: 5mm;width: 100%;}
+.table-nomeja{width: 100%;padding: 0; border: solid 1px;}
+.table-nomeja-right{float: left;margin-bottom:5mm;margin-left: 5mm;}
+.table-nomeja td, .table-nomeja-right td{text-align: center;vertical-align:middle;padding: 2mm;}
+.nopesertameja{font-weight: bold;border-bottom: solid 1px #000;}
+.nomejaheader{font-weight: bold;border-bottom: solid 1px #000;}
+td .nomejaheader{padding-top: 0;padding-bottom: -2mm; line-height: 6mm;}
+td .nomejafooter{font-weight: bold;font-size: 11px;padding-top: 0;padding-bottom: -3mm;}
+.textnomormeja{font-size: 24px;}
+.ttdgenap{margin-left: 50%;}
+.textformasi{font-size: 12px;line-height: 12pt;margin-top: 2mm;}
+ol{margin: 0;}
+
+.tablenokursi{width: 100%; padding: 1mm;}
+.boxnokursi{height: auto;border: solid 1px;}
+.boxnokursiheader{padding: 1mm;text-align: center;font-weight: bold;border-bottom: solid 1px #000;}
+.condensedlines {margin: 0;font-size:12pt;line-height: 12pt;}
+.boxnokursicontent{padding: 1mm;text-align: center;font-weight: bold;border-bottom: solid 1px #000;}
+p{margin: 0;padding: 0;}
+.fitcontent{width:1%;white-space:nowrap;}
+.table td.col-hg{line-height: 25px;}
