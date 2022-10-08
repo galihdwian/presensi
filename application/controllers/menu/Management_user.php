@@ -3,7 +3,7 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
- * @author Galih Dwi Aditya Nugraha
+ * @author UNICORN
  * 
  * @property user_model $user_model
  */

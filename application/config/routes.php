@@ -58,6 +58,22 @@ $route['translate_uri_dashes'] = FALSE;
 $route['logout'] = 'login/logout';
 
 $route['dashboard'] = 'dashboard';
+
 $route['management_user'] = 'menu/management_user';
 $route['user_tambah'] = 'menu/management_user/tambah_user';
 $route['aktivasi_user/(:any)/(:any)'] = 'menu/management_user/status_aktivasi_user/$1/$2';
+
+$route['jurusan'] = 'menu/jurusan';
+$route['jurusan_tambah'] = 'menu/jurusan/tambah_jurusan';
+$route['jurusan_edit/(:any)'] = 'menu/jurusan/edit_jurusan/$1';
+$route['jurusan_hapus/(:any)'] = 'menu/jurusan/hapus_jurusan/$1';
+
+$route['dosen'] = 'menu/dosen';
+$route['dosen_tambah'] = 'menu/dosen/tambah_dosen';
+$route['aktivasi_dosen/(:any)/(:any)'] = 'menu/dosen/status_aktivasi_dosen/$1/$2';
+$route['dosen_edit/(:any)'] = 'menu/dosen/edit_dosen/$1';
+
+$route['mahasiswa'] = 'menu/mahasiswa';
+$route['mahasiswa_tambah'] = 'menu/mahasiswa/tambah_mahasiswa';
+$route['aktivasi_mahasiswa/(:any)/(:any)'] = 'menu/mahasiswa/status_aktivasi_mahasiswa/$1/$2';
+$route['mahasiswa_edit/(:any)'] = 'menu/mahasiswa/edit_mahasiswa/$1';

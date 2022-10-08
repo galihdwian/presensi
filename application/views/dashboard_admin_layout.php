@@ -60,22 +60,25 @@
                                 <li><a href="<?= site_url('dashboard'); ?>"><i class="fa fa-home"></i>Dashboard</a></li>
 
                                 <li><a href="<?= site_url('management_user'); ?>"><i class="fa fa-users"></i> Management User</a></li>
-                                <li><a><i class="fa fa-hospital-o"></i> Visi dan Misi <span class="fa fa-chevron-down"></span></a>
+                                <li><a><i class="fa fa-hospital-o"></i> Master <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
-                                        <li><a href="<?= site_url('admin/visi'); ?>">Visi</a></li>
-                                        <li><a href="<?= site_url('admin/misi'); ?>">Misi</a></li>
+                                        <li><a href="<?= site_url('jurusan'); ?>">Jurusan</a></li>
+                                        <li><a href="<?= site_url('dosen'); ?>">Dosen</a></li>
+                                        <li><a href="<?= site_url('mahasiswa'); ?>">Mahasiswa</a></li>
                                     </ul>
                                 </li>
-                                <li><a><i class="fa fa-institution"></i> Komkordik <span class="fa fa-chevron-down"></span></a>
+
+
+                                <!-- <li><a><i class="fa fa-institution"></i> Komkordik <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
                                         <li><a href="<?= site_url('admin/strukturorganisasi'); ?>">Struktur Organisasi</a></li>
                                         <li><a href="<?= site_url('admin/sk_komkordik'); ?>">SK Komkordik</a></li>
                                         <li><a href="<?= site_url('admin/ppdtp_fk_unsoed'); ?>">PPDTP FK Unsoed</a></li>
                                     </ul>
-                                </li>
-                                <li><a href="<?= site_url('admin/kegiatan'); ?>"><i class="fa fa-pencil"></i> Kegiatan</a></li>
+                                </li> -->
+                                <!-- <li><a href="<?= site_url('admin/kegiatan'); ?>"><i class="fa fa-pencil"></i> Kegiatan</a></li>
                                 <li><a href="<?= site_url('admin/pesertadidik'); ?>"><i class="fa fa-user"></i> Peserta Didik</a></li>
-                                <li><a href="<?= site_url('admin/gallery'); ?>"><i class="fa fa-photo"></i> Gallery</a></li>
+                                <li><a href="<?= site_url('admin/gallery'); ?>"><i class="fa fa-photo"></i> Gallery</a></li> -->
                                 <li><a href="<?= site_url('logout'); ?>"><i class="fa fa-power-off"></i> Log Out</a></li>
                             </ul>
                         </div>
@@ -131,6 +134,39 @@
                         include 'users/tambah_user.php';
                         break;
                         //end of user modul
+                    case 'jurusan':
+                        include 'jurusan/jurusan.php';
+                        break;
+                    case 'tambah_jurusan':
+                        include 'jurusan/tambah_jurusan.php';
+                        break;
+                    case 'edit_jurusan':
+                        include 'jurusan/edit_jurusan.php';
+                        break;
+                        //end of jurusan modul
+                    case 'dosen':
+                        include 'dosen/dosen.php';
+                        break;
+                    case 'tambah_dosen':
+                        include 'dosen/tambah_dosen.php';
+                        break;
+                    case 'edit_dosen':
+                        include 'dosen/edit_dosen.php';
+                        break;
+                        //end of dosen modul
+                    case 'mahasiswa':
+                        include 'mahasiswa/mahasiswa.php';
+                        break;
+                    case 'tambah_mahasiswa':
+                        include 'mahasiswa/tambah_mahasiswa.php';
+                        break;
+                    case 'edit_mahasiswa':
+                        include 'mahasiswa/edit_mahasiswa.php';
+                        break;
+                        //end of dosen modul
+
+
+
 
 
                     case 'struktur_organisasi':
