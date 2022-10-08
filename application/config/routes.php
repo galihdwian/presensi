@@ -77,3 +77,11 @@ $route['mahasiswa'] = 'menu/mahasiswa';
 $route['mahasiswa_tambah'] = 'menu/mahasiswa/tambah_mahasiswa';
 $route['aktivasi_mahasiswa/(:any)/(:any)'] = 'menu/mahasiswa/status_aktivasi_mahasiswa/$1/$2';
 $route['mahasiswa_edit/(:any)'] = 'menu/mahasiswa/edit_mahasiswa/$1';
+
+$route['matkul'] = 'menu/matkul';
+$route['matkul_tambah'] = 'menu/matkul/tambah_matkul';
+$route['matkul_edit/(:any)'] = 'menu/matkul/edit_matkul/$1';
+$route['matkul_hapus/(:any)'] = 'menu/matkul/hapus_matkul/$1';
+$route['matkul_detail/(:any)'] = 'menu/matkul/detail_matkul/$1';
+$route['matkul_hapus_detail/(:any)/(:any)'] = 'menu/matkul/detail_matkul_hapus/$1/$2';
+$route['matkul_detail_tambah/(:any)'] = 'menu/matkul/detail_matkul_tambah/$1';

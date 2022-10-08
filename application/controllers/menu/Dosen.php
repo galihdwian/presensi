@@ -107,6 +107,7 @@ class Dosen extends CI_Controller
             if ($this->form_validation->run($this) == FALSE) {
                 $data['titlepage'] = 'Tambah Dosen';
                 $data['page'] = 'tambah_dosen';
+                $data['get_dosen'] = $this->dosen_model->getDosen($id_dsn);
                 $data['error'] = validation_errors();
                 $this->load->view('dashboard_admin_layout', $data);
             } else {

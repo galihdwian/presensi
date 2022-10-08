@@ -69,6 +69,7 @@ class Mahasiswa extends CI_Controller
             if ($this->form_validation->run($this) == FALSE) {
                 $data['titlepage'] = 'Tambah Mahasiswa';
                 $data['page'] = 'tambah_mahasiswa';
+                $data['get_list_jurusan'] = $this->jurusan_model->getListJurusan();
                 $data['error'] = validation_errors();
                 $this->load->view('dashboard_admin_layout', $data);
             } else {
@@ -116,6 +117,8 @@ class Mahasiswa extends CI_Controller
             if ($this->form_validation->run($this) == FALSE) {
                 $data['titlepage'] = 'Edit Mahasiswa';
                 $data['page'] = 'edit_mahasiswa';
+                $data['get_list_jurusan'] = $this->jurusan_model->getListJurusan();
+                $data['get_mahasiswa'] = $this->mahasiswa_model->getMahasiswa($id_mhs);
                 $data['error'] = validation_errors();
                 $this->load->view('dashboard_admin_layout', $data);
             } else {

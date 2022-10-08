@@ -3,13 +3,13 @@ if (!empty($error)) {
     echo '<div class="alert alert-danger">' . $error . '</div>';
 }
 $attributes = array('data-toggle' => 'validator', 'role' => 'form');
-echo form_open('mahasiswa_edit/' . $get_mahasiswa->id_mhs, $attributes);
+echo form_open('matkul_edit/' . $get_matkul->id_matkul, $attributes);
 ?>
 <div class="row">
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h2>Edit Data Mahasiswa</h2>
+                <h2>Edit Data Mata Kuliah</h2>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
@@ -18,32 +18,33 @@ echo form_open('mahasiswa_edit/' . $get_mahasiswa->id_mhs, $attributes);
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group has-feedback">
-                                    <label>NIM</label>
-                                    <input type="text" class="form-control input-sm" value="<?= $get_mahasiswa->nim ?>" name="nim" autocomplete="off" autofocus autocapitalize="true" required="true">
+                                    <label>Nama Mata Kuliah</label>
+                                    <input type="text" class="form-control input-sm" value="<?= $get_matkul->nm_matkul ?>" name="nm_matkul" autocomplete="off" autofocus autocapitalize="true" required="true">
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 </div>
                                 <div class="form-group has-feedback">
-                                    <label>Nama Mahasiswa</label>
-                                    <input type="text" class="form-control input-sm" value="<?= $get_mahasiswa->nama_mhs ?>" name="nama_mhs" autocomplete="off" autofocus autocapitalize="true" required="true">
-                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                </div>
-                                <div class="form-group has-feedback">
-                                    <label>Jurusan</label>
+                                    <label>Nama Dosen Pengampu</label>
                                     <?php
-                                    $options[''] = '- Pilih Jurusan -';
-                                    foreach ($get_list_jurusan as $r) :
-                                        $options[$r->kode_jurusan] = $r->nama_jurusan;
+                                    $options[''] = '- Pilih Dosen Pengampu -';
+                                    foreach ($get_list_dosen as $r) :
+                                        $options[$r->id_dsn] = $r->nama_dsn;
                                     endforeach;
                                     unset($r);
-                                    echo form_dropdown('kode_jurusan', $options, $get_mahasiswa->kode_jurusan, 'class="form-control input-sm" tabindex="2" required  autocomplete="off"');
+                                    echo form_dropdown('id_dsn', $options, $get_matkul->id_dsn, 'class="form-control input-sm" tabindex="2" required  autocomplete="off"');
                                     ?>
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 </div>
+                                <div class="form-group has-feedback">
+                                    <label>SKS</label>
+                                    <input type="text" class="form-control input-sm" value="<?= $get_matkul->sks ?>" name="sks" autocomplete="off" autofocus autocapitalize="true" required="true">
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
+
                             </div>
                         </div>
                         <div class="ln_solid"></div>
                         <div class="pull-right">
-                            <a href="<?= site_url('mahasiswa'); ?>" class="btn btn-warning" id="btnBatal">Batal</a>
+                            <a href="<?= site_url('matkul'); ?>" class="btn btn-warning" id="btnBatal">Batal</a>
                             <button type="submit" name="submit" value="submit" class="btn btn-primary">Simpan</button>
                         </div>
                         <div class="clearfix"></div>

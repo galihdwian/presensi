@@ -65,6 +65,7 @@
                                         <li><a href="<?= site_url('jurusan'); ?>">Jurusan</a></li>
                                         <li><a href="<?= site_url('dosen'); ?>">Dosen</a></li>
                                         <li><a href="<?= site_url('mahasiswa'); ?>">Mahasiswa</a></li>
+                                        <li><a href="<?= site_url('matkul'); ?>">Mata Kuliah</a></li>
                                     </ul>
                                 </li>
 
@@ -163,75 +164,25 @@
                     case 'edit_mahasiswa':
                         include 'mahasiswa/edit_mahasiswa.php';
                         break;
-                        //end of dosen modul
+                        //end of mahasiswa modul
+                    case 'matkul':
+                        include 'matkul/matkul.php';
+                        break;
+                    case 'tambah_matkul':
+                        include 'matkul/tambah_matkul.php';
+                        break;
+                    case 'edit_matkul':
+                        include 'matkul/edit_matkul.php';
+                        break;
+                    case 'detail_matkul':
+                        include 'matkul/detail_matkul.php';
+                        break;
+                    case 'tambah_detail_matkul':
+                        include 'matkul/tambah_detail_matkul.php';
+                        break;
 
 
-
-
-
-                    case 'struktur_organisasi':
-                        include 'struktur_organisasi/file_struktur_organisasi.php';
-                        break;
-                    case 'visi':
-                        include 'visidanmisi/list_visi.php';
-                        break;
-                    case 'misi':
-                        include 'visidanmisi/list_misi.php';
-                        break;
-                    case 'kegiatan':
-                        include 'kegiatan/list_kegiatan.php';
-                        break;
-                    case 'tambah_kegiatan':
-                        include 'kegiatan/tambah_kegiatan.php';
-                        break;
-                    case 'edit_kegiatan':
-                        include 'kegiatan/edit_kegiatan.php';
-                        break;
-                    case 'tambahan_kegiatan':
-                        include 'kegiatan/list_tambahan.php';
-                        break;
-                    case 'tambah_kegiatan_lampiran':
-                        include 'kegiatan/tambah_kegiatan_lampiran.php';
-                        break;
-                    case 'edit_kegiatan_lampiran':
-                        include 'kegiatan/edit_kegiatan_lampiran.php';
-                        break;
-                    case 'tambah_visi':
-                        include 'visidanmisi/tambah_visi.php';
-                        break;
-                    case 'tambah_misi':
-                        include 'visidanmisi/tambah_misi.php';
-                        break;
-                    case 'edit_visi':
-                        include 'visidanmisi/edit_visi.php';
-                        break;
-                    case 'edit_misi':
-                        include 'visidanmisi/edit_misi.php';
-                        break;
-                    case 'gallery':
-                        include 'gallery/list_gallery.php';
-                        break;
-                    case 'tambah_gallery':
-                        include 'gallery/tambah_gallery.php';
-                        break;
-                    case 'sk_komkordik':
-                        include 'sk_komkordik/list_sk_komkordik.php';
-                        break;
-                    case 'tambah_sk_komkordik':
-                        include 'sk_komkordik/tambah_sk_komkordik.php';
-                        break;
-                    case 'ppdtp_fk_unsoed':
-                        include 'ppdtp_fk_unsoed/list_ppdtp_fk_unsoed.php';
-                        break;
-                    case 'tambah_ppdtp_fk_unsoed':
-                        include 'ppdtp_fk_unsoed/tambah_ppdtp_fk_unsoed.php';
-                        break;
-                    case 'pesertadidik':
-                        include 'pesertadidik/list_pesertadidik.php';
-                        break;
-                    case 'tambah_pesertadidik':
-                        include 'pesertadidik/tambah_pesertadidik.php';
-                        break;
+                        //end of matkul modul
                 }
                 ?>
                 <!-- footer content -->

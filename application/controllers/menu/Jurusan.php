@@ -83,6 +83,7 @@ class Jurusan extends CI_Controller
             if ($this->form_validation->run($this) == FALSE) {
                 $data['titlepage'] = 'Edit Jurusan';
                 $data['page'] = 'edit_jurusan';
+                $data['get_jurusan'] = $this->jurusan_model->getJurusan($id_jurusan);
                 $data['error'] = validation_errors();
                 $this->load->view('dashboard_admin_layout', $data);
             } else {
