@@ -3,7 +3,7 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
- * Description of User_model
+ * Description of Mahasiswa_model
  *
  * @author UNICORN
  */

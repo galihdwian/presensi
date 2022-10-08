@@ -3,11 +3,11 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
- * Description of Dosen_model
+ * Description of Matkul_model
  *
  * @author UNICORN
  */
-class Dosen_model extends CI_Model
+class Matkul_model extends CI_Model
 {
 
     function getListDosen()
