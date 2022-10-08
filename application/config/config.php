@@ -372,7 +372,7 @@ $config['encryption_key'] = 'G@lih_g@nteng';
   |
  */
 $config['sess_driver'] = 'files';
-$config['sess_cookie_name'] = 'komkordik_session';
+$config['sess_cookie_name'] = 'presensi_session';
 $config['sess_expiration'] = 0;
 $config['sess_save_path'] = APPPATH . 'cache';
 $config['sess_match_ip'] = FALSE;
@@ -443,8 +443,8 @@ $config['global_xss_filtering'] = FALSE;
   | 'csrf_exclude_uris' = Array of URIs which ignore CSRF checks
  */
 $config['csrf_protection'] = FALSE;
-$config['csrf_token_name'] = 'csrf_token_komkordik_rsms';
-$config['csrf_cookie_name'] = 'csrf_cookie_komkordik_rsms';
+$config['csrf_token_name'] = 'csrf_token_presensi';
+$config['csrf_cookie_name'] = 'csrf_cookie_presensi';
 $config['csrf_expire'] = 7200;
 $config['csrf_regenerate'] = TRUE;
 $config['csrf_exclude_uris'] = array();
@@ -515,7 +515,7 @@ $config['rewrite_short_tags'] = FALSE;
   | Array:		array('10.0.1.200', '192.168.5.0/24')
  */
 $config['proxy_ips'] = '';
-$config['appversion'] = 'Beta 20220727';
+$config['appversion'] = 'Beta 2022';
 
 //set csrf_protection
 $csrf_accept = [];

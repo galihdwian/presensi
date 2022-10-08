@@ -52,59 +52,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  */
 
 
-$route['default_controller'] = 'home';
+$route['default_controller'] = 'login';
 $route['translate_uri_dashes'] = FALSE;
-$route['komkordik'] = 'home';
-$route['404_override'] = 'home/_404';
 
-$route['login'] = 'admin/login';
-$route['logout'] = 'admin/login/logout';
-
-$route['visimisi'] = 'profil/visimisi';
-$route['strukturorganisasi'] = 'profil/strukturorganisasi';
-$route['sk_komkordik'] = 'profil/sk_komkordik';
-$route['ppdtp_fk_unsoed'] = 'profil/ppdtp_fk_unsoed';
-$route['daftarpesertadidik'] = 'profil/daftarpesertadidik';
-$route['kegiatan'] = 'kegiatan/list_kegiatan';
-$route['kegiatan/(:num)'] = 'kegiatan/list_kegiatan/$1';
-$route['kegiatan/detail_kegiatan/(:any)'] = 'kegiatan/detail_kegiatan/$1';
-
-$route['pesertadidik'] = 'pesertadidik/list_pesertadidik';
-$route['pesertadidik/(:num)'] = 'pesertadidik/list_pesertadidik/$1';
-$route['pesertadidik/detail_pesertadidik/(:any)'] = 'kegiatan/detail_pesertadidik/$1';
-
-$route['admin'] = 'admin/dashboard';
-$route['admin/management_user'] = 'admin/management_user';
-$route['admin/management_user/tambah'] = 'admin/management_user/tambah_user';
-$route['admin/status_aktivasi_user/(:any)/(:any)'] = 'admin/management_user/status_aktivasi_user/$1/$2';
-$route['admin/visi'] = 'admin/visidanmisi/list_visi';
-$route['admin/misi'] = 'admin/visidanmisi/list_misi';
-$route['admin/visidanmisi/tambah_visi'] = 'admin/visidanmisi/tambah_visi';
-$route['admin/visidanmisi/tambah_misi'] = 'admin/visidanmisi/tambah_misi';
-$route['admin/visidanmisi/delete_visi/(:any)'] = 'admin/visidanmisi/delete_visi/$1';
-$route['admin/visidanmisi/delete_misi/(:any)'] = 'admin/visidanmisi/delete_misi/$1';
-$route['admin/visidanmisi/edit_visi/(:any)'] = 'admin/visidanmisi/edit_visi/$1';
-$route['admin/visidanmisi/edit_misi/(:any)'] = 'admin/visidanmisi/edit_misi/$1';
-$route['admin/strukturorganisasi'] = 'admin/strukturorganisasi';
-$route['admin/kegiatan'] = 'admin/kegiatan';
-$route['admin/kegiatan/tambah_kegiatan'] = 'admin/kegiatan/tambah_kegiatan';
-$route['admin/kegiatan/delete_kegiatan/(:any)'] = 'admin/kegiatan/delete_kegiatan/$1';
-$route['admin/kegiatan/edit_kegiatan/(:any)'] = 'admin/kegiatan/edit_kegiatan/$1';
-$route['admin/kegiatan/tambahan/(:any)'] = 'admin/kegiatan/tambahan/$1';
-$route['admin/kegiatan/tambah_kegiatan_lampiran/(:any)'] = 'admin/kegiatan/tambah_kegiatan_lampiran/$1';
-$route['admin/kegiatan/delete_kegiatan_lampiran/(:any)/(:any)'] = 'admin/kegiatan/delete_kegiatan_lampiran/$1/$2';
-$route['admin/kegiatan/edit_kegiatan_lampiran/(:any)/(:any)'] = 'admin/kegiatan/edit_kegiatan_lampiran/$1/$2';
-
-
-$route['admin/gallery'] = 'admin/gallery';
-$route['admin/gallery/tambah_gallery'] = 'admin/gallery/tambah_gallery';
-$route['admin/gallery/delete_gallery/(:any)'] = 'admin/gallery/delete_gallery/$1';
-$route['admin/sk_komkordik'] = 'admin/sk_komkordik';
-$route['admin/sk_komkordik/tambah_sk_komkordik'] = 'admin/sk_komkordik/tambah_sk_komkordik';
-$route['admin/sk_komkordik/delete_sk_komkordik/(:any)'] = 'admin/sk_komkordik/delete_sk_komkordik/$1';
-$route['admin/ppdtp_fk_unsoed'] = 'admin/ppdtp_fk_unsoed';
-$route['admin/ppdtp_fk_unsoed/tambah_ppdtp_fk_unsoed'] = 'admin/ppdtp_fk_unsoed/tambah_ppdtp_fk_unsoed';
-$route['admin/ppdtp_fk_unsoed/delete_ppdtp_fk_unsoed/(:any)'] = 'admin/ppdtp_fk_unsoed/delete_ppdtp_fk_unsoed/$1';
-
-$route['admin/pesertadidik'] = 'admin/pesertadidik';
-$route['admin/pesertadidik/tambah_pesertadidik'] = 'admin/pesertadidik/tambah_pesertadidik';
+$route['logout'] = 'login/logout';

@@ -25,7 +25,7 @@ class Login extends CI_Controller
         if (!$_POST) {
             $data['menu'] = '';
             $data['page'] = 'loginpage';
-            $this->load->view('publik/layout', $data);
+            $this->load->view('layout', $data);
         } else {
             $this->autenticate();
         }

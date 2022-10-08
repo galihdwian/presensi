@@ -5,7 +5,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 /**
  * Description of Login_model
  *
- * @author Galih Swi A N
+ * @author UNICORN
  */
 class Login_model extends CI_Model
 {
