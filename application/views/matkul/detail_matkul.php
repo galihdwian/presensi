@@ -40,7 +40,7 @@
                             echo '<td>' . $r->nama_mhs . '</td>';
                             echo '<td class="fit">';
                         ?>
-                            <button class="btn btn-sm btn-danger" onclick="Hapus('<?php echo $r->id_matkul; ?>\<?php echo $r->id_mahasiswa; ?>')">Hapus</button>
+                            <button class="btn btn-sm btn-danger" onclick="Hapus('<?php echo $r->id_matkul; ?>','<?php echo $r->id_mhs; ?>')">Hapus</button>
                         <?php
                             echo '</td>';
                             echo '</tr>';
