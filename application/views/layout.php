@@ -57,32 +57,6 @@
         case '404':
             include 'error_404.php';
             break;
-        case 'index':
-            include 'layout_item_slider.php';
-            include 'layout_berita.php';
-            include 'layout_item_galeri.php';
-            break;
-        case 'visimisi':
-            include 'profil/visimisi.php';
-            break;
-        case 'strukturorganisasi':
-            include 'profil/strukturorganisasi.php';
-            break;
-        case 'sk_komkordik':
-            include 'profil/sk_komkordik.php';
-            break;
-        case 'ppdtp_fk_unsoed':
-            include 'profil/ppdtp_fk_unsoed.php';
-            break;
-        case 'daftarpesertadidik':
-            include 'profil/daftarpesertadidik.php';
-            break;
-        case 'kegiatan':
-            include 'kegiatan/kegiatan.php';
-            break;
-        case 'detail_kegiatan':
-            include 'kegiatan/detail_kegiatan.php';
-            break;
         case 'loginpage':
             include 'login_index.php';
             break;
@@ -107,37 +81,7 @@
     <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.prettyPhoto.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.maskedinput.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/js/validator.min.js'); ?>"></script>
-    <script>
-        $(function() {
-            $('#mycarousel').carousel({
-                interval: 3000
-            });
-            //                var windowheight = $(window).height();
-            //                var documentheight = $(document).height();
-            //                var screenheight = screen.height;
-            //                if (documentheight < screenheight) {
-            //                    $('#footer').addClass('navbar-fixed-bottom');
-            //                }
-        });
-        $('body').prepend('<a href="#" class="back-to-top"></a>');
-        var amountScrolled = 300;
-        $(window).scroll(function() {
-            if ($(window).scrollTop() > amountScrolled) {
-                $('a.back-to-top').fadeIn('slow');
-            } else {
-                $('a.back-to-top').fadeOut('slow');
-            }
-        });
-        $('a.back-to-top, a.simple-back-to-top').click(function() {
-            $('html, body').animate({
-                scrollTop: 0
-            }, 700);
-            return false;
-        });
-        $("a[rel^='prettyPhoto']").prettyPhoto({
-            social_tools: false
-        });
-    </script>
+
     <?php include('analyticstracking.php'); ?>
 </body>
 

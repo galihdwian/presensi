@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>KOMKORDIK RSMS ADMIN DASHBOARD</title>
+    <title>PRESENSI DASHBOARD</title>
     <link href="<?= base_url(); ?>assets/admin/css/mystyle.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/admin/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/admin/fonts/css/font-awesome.min.css" rel="stylesheet">
@@ -37,7 +37,7 @@
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="<?= site_url(''); ?>" target="_blank" class="site_title"><span>KOMKORDIK RSMS</span></a>
+                        <a href="<?= site_url(''); ?>" target="_blank" class="site_title"><span>DAHSBOARD</span></a>
                     </div>
                     <div class="clearfix"></div>
                     <!-- menu prile quick info -->
@@ -47,7 +47,7 @@
                         </div>
                         <div class="profile_info">
                             <span>Selamat Datang,</span>
-                            <h2><?= $this->session->userdata['nama_user']; ?></h2>
+                            <h2><?= $this->session->userdata['username']; ?></h2>
                         </div>
                     </div>
                     <!-- /menu prile quick info -->
@@ -57,9 +57,9 @@
                         <div class="menu_section">
                             <h3>&nbsp;</h3>
                             <ul class="nav side-menu">
-                                <li><a href="<?= site_url('admin'); ?>"><i class="fa fa-home"></i> Admin Dashboard</a></li>
+                                <li><a href="<?= site_url('dashboard'); ?>"><i class="fa fa-home"></i>Dashboard</a></li>
 
-                                <li><a href="<?= site_url('admin/management_user'); ?>"><i class="fa fa-users"></i> Management User</a></li>
+                                <li><a href="<?= site_url('management_user'); ?>"><i class="fa fa-users"></i> Management User</a></li>
                                 <li><a><i class="fa fa-hospital-o"></i> Visi dan Misi <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
                                         <li><a href="<?= site_url('admin/visi'); ?>">Visi</a></li>
@@ -93,7 +93,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li class="">
                                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    <img src="<?= base_url(); ?>assets/admin/images/img.jpg" alt=""><?= $this->session->userdata['nama_user']; ?>
+                                    <img src="<?= base_url(); ?>assets/admin/images/img.jpg" alt=""><?= $this->session->userdata['username']; ?>
                                     <span class=" fa fa-angle-down"></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
@@ -123,12 +123,16 @@
                     case 'index':
                         include 'dashboard_index.php';
                         break;
+                        //end of dahsboard index
                     case 'management_user':
                         include 'users/management_user.php';
                         break;
                     case 'tambah_user':
                         include 'users/tambah_user.php';
                         break;
+                        //end of user modul
+
+
                     case 'struktur_organisasi':
                         include 'struktur_organisasi/file_struktur_organisasi.php';
                         break;
@@ -198,7 +202,7 @@
                 <footer>
                     <div class="copyright-info">
                         <p class="pull-right">
-                            KOMKORDIK RSMS Admin Dashboard &copy; Cah SIM -
+                            Presensi Dashboard &copy;
                             Gentelella Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
                         </p>
                     </div>

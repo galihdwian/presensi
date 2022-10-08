@@ -27,6 +27,6 @@ class Dashboard extends CI_Controller
     {
         $data['titlepage'] = 'Dashboard';
         $data['page'] = 'index';
-        $this->load->view('admin/dashboard_admin_layout', $data);
+        $this->load->view('dashboard_admin_layout', $data);
     }
 }

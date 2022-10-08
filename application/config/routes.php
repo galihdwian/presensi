@@ -56,3 +56,8 @@ $route['default_controller'] = 'login';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['logout'] = 'login/logout';
+
+$route['dashboard'] = 'dashboard';
+$route['management_user'] = 'menu/management_user';
+$route['user_tambah'] = 'menu/management_user/tambah_user';
+$route['aktivasi_user'] = 'menu/management_user/status_aktivasi_user';

@@ -7,7 +7,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  *
  * @author Galih Swi A N
  */
-class User_model extends CI_Model
+class User_modeldsds extends CI_Model
 {
 
     function getListUser()

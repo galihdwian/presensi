@@ -13,7 +13,7 @@ class Login_model extends CI_Model
     //put your code here
     function getUser($user)
     {
-        return $this->db->get_where('user_tb', array('username' => $user));
+        return $this->db->get_where('admin', array('usernm' => $user));
     }
 
     function lastLogin($lastlog, $id)

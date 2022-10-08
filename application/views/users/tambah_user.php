@@ -3,7 +3,7 @@ if (!empty($error)) {
     echo '<div class="alert alert-danger">' . $error . '</div>';
 }
 $attributes = array('data-toggle' => 'validator', 'role' => 'form');
-echo form_open('admin/management_user/tambah', $attributes);
+echo form_open('user_tambah', $attributes);
 ?>
 <div class="row">
     <div class="col-md-12">
@@ -23,11 +23,6 @@ echo form_open('admin/management_user/tambah', $attributes);
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 </div>
                                 <div class="form-group has-feedback">
-                                    <label>Nama Lengkap</label>
-                                    <input type="text" class="form-control input-sm" name="nama_lengkap" autocomplete="off" autofocus autocapitalize="true" required="true">
-                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                </div>
-                                <div class="form-group has-feedback">
                                     <label>Password</label>
                                     <input type="password" class="form-control input-sm" name="password" id="password" autocomplete="off" autofocus autocapitalize="true" required="true">
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
@@ -38,35 +33,12 @@ echo form_open('admin/management_user/tambah', $attributes);
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                     <div class="help-block with-errors" id='message'></div>
                                 </div>
-                                <div class="form-group has-feedback">
-                                    <label>Level</label>
-                                    <?php
-                                    $options[''] = 'Pilih Level';
-                                    foreach ($list_level as $row) :
-                                        $options[$row->id_level] = $row->nama_level;
-                                    endforeach;
-                                    echo form_dropdown('id_level', $options, set_value('id_level'), 'required class="form-control select2" id="txtid_level"');
-                                    unset($options);
-                                    ?>
-                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                </div>
-                                <div class="form-group has-feedback">
-                                    <label>Status</label>
-                                    <?php
-                                    $options[''] = 'Pilih Status';
-                                    foreach ($list_status as $row) :
-                                        $options[$row->id_status] = $row->nama_status;
-                                    endforeach;
-                                    echo form_dropdown('id_status', $options, set_value('id_status'), 'required class="form-control select2" id="txtid_status"');
-                                    unset($options);
-                                    ?>
-                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                                </div>
+
                             </div>
                         </div>
                         <div class="ln_solid"></div>
                         <div class="pull-right">
-                            <a href="<?= site_url('admin/management_user'); ?>" class="btn btn-warning" id="btnBatal">Batal</a>
+                            <a href="<?= site_url('management_user'); ?>" class="btn btn-warning" id="btnBatal">Batal</a>
                             <button type="submit" name="submit" value="submit" class="btn btn-primary">Simpan</button>
                         </div>
                         <div class="clearfix"></div>

@@ -39,9 +39,9 @@ class Login extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $data['menu'] = '';
             $data['page'] = 'loginpage';
-            $this->load->view('publik/layout', $data);
+            $this->load->view('layout', $data);
         } else {
-            redirect('admin');
+            redirect('dashboard');
         }
     }
 
@@ -54,31 +54,24 @@ class Login extends CI_Controller
             $password = $this->input->post('password', true);
             $password_chiper = md5($password);
             foreach ($getUser->result() as $getUserRows) :
-                $check_password = ehash_check($password_chiper, $getUserRows->password);
-                if ($check_password == true) {
-                    if ($getUserRows->aktivasi != 'Y') {
-                        $this->form_validation->set_message('_check_login', 'User Anda Sudah Tidak Aktif Silahkan Hubungi Admin.');
-                        return FALSE;
-                    } else {
-                        if ($getUserRows->level_user <= '2') {
-                            $newdata = array(
-                                'username' => $getUserRows->username,
-                                'nama_user' => $getUserRows->nama_lengkap,
-                                'hak_akses' => $getUserRows->level_user,
-                                'id_user' => $getUserRows->id_user,
-                                'logged_in' => TRUE,
-                                'is_admin' => TRUE
-                            );
-                            $this->session->set_userdata($newdata);
-                            $this->login_model->lastLogin(date('Y-m-d H:i:s'), $getUserRows->id_user);
-                            return TRUE;
-                        } else {
-                            return FALSE;
-                        }
-                    }
-                } else {
-                    $this->form_validation->set_message('_check_login', 'Username atau Password salah');
+                if ($getUserRows->aktivasi != 1) {
+                    $this->form_validation->set_message('_check_login', 'Akun Belum Aktif/Tidak Aktif');
                     return FALSE;
+                } else {
+                    $check_password = ehash_check($password_chiper, $getUserRows->password);
+                    if ($check_password == true) {
+                        $newdata = array(
+                            'username' => $getUserRows->usernm,
+                            'id_user' => $getUserRows->id_admin,
+                            'aktivasi' => $getUserRows->aktivasi,
+                            'logged_in' => TRUE,
+                        );
+                        $this->session->set_userdata($newdata);
+                        return TRUE;
+                    } else {
+                        $this->form_validation->set_message('_check_login', 'Username atau Password salah');
+                        return FALSE;
+                    }
                 }
             endforeach;
         } else {
@@ -89,14 +82,8 @@ class Login extends CI_Controller
 
     function logout()
     {
-        if (!$this->session->userdata('is_admin')) {
-            $this->session->set_userdata(array('logged_in' => FALSE));
-            $this->session->sess_destroy();
-            redirect('admin/login');
-        } else {
-            $this->session->set_userdata(array('is_admin' => FALSE));
-            $this->session->sess_destroy();
-            redirect('admin/login');
-        }
+        $this->session->set_userdata(array('logged_in' => FALSE));
+        $this->session->sess_destroy();
+        redirect('login');
     }
 }

@@ -5,7 +5,7 @@
                 <h2>List Data User</h2>
                 <div class="nav navbar-right panel_toolbox">
                     <div class="dropdown">
-                        <a href="<?= site_url('admin/management_user/tambah'); ?>" class="btn btn-primary">
+                        <a href="<?= site_url('user_tambah'); ?>" class="btn btn-primary">
                             Tambah
                         </a>
                     </div>
@@ -18,9 +18,7 @@
                         <tr class="info">
                             <th>No</th>
                             <th>Username</th>
-                            <th>Nama Lengkap</th>
                             <th>Status</th>
-                            <th>Login Terakhir</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -28,19 +26,18 @@
                         <?php
                         $no = 1;
                         foreach ($list_user as $r) :
+                            $status = $r->aktivasi != 1 ? "Nonaktif" : "Aktif";
                             echo '<tr>';
                             echo '<td class="fit">' . $no . '</td>';
-                            echo '<td>' . $r->username . '</td>';
-                            echo '<td>' . $r->nama_lengkap . '</td>';
-                            echo '<td>' . $r->aktivasi . '</td>';
-                            echo '<td>' . $r->last_login . '</td>';
+                            echo '<td>' . $r->usernm . '</td>';
+                            echo '<td>' . $status  . '</td>';
                             echo '<td class="fit">';
                         ?>
                             <?php
-                            if ($r->aktivasi != 'Y') { ?>
-                                <button class="btn btn-sm btn-success" onclick="Aktifkan('<?php echo $r->id_user; ?>')">Aktifkan</button>
+                            if ($r->aktivasi != 1) { ?>
+                                <button class="btn btn-sm btn-success" onclick="Aktifkan('<?php echo $r->id_admin; ?>')">Aktifkan</button>
                             <?php } else { ?>
-                                <button class="btn btn-sm btn-danger" onclick="Nonaktifkan('<?php echo $r->id_user; ?>')">Nonaktifkan</button>
+                                <button class="btn btn-sm btn-danger" onclick="Nonaktifkan('<?php echo $r->id_admin; ?>')">Nonaktifkan</button>
                             <?php } ?>
 
                         <?php
@@ -62,13 +59,13 @@
     });
 </script>
 <script type="text/javascript">
-    function Aktifkan(id_user) {
+    function Aktifkan(id_admin) {
         let yes = 'Y';
-        window.location.href = "<?php echo site_url('admin/status_aktivasi_user'); ?>/" + id_user + "/" + yes;
+        window.location.href = "<?php echo site_url('aktivasi_user'); ?>/" + id_admin + "/" + yes;
     }
 
-    function Nonaktifkan(id_user) {
+    function Nonaktifkan(id_admin) {
         let no = 'N';
-        window.location.href = "<?php echo site_url('admin/status_aktivasi_user'); ?>/" + id_user + "/" + no;
+        window.location.href = "<?php echo site_url('aktivasi_user'); ?>/" + id_admin + "/" + no;
     }
 </script>
