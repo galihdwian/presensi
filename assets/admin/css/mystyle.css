@@ -1,0 +1,113 @@
+.demo-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.demo-list ul li {
+    position: relative;
+    padding: 0px 0px 5px 0px;
+}
+.lihr{border-bottom: 2px solid #E6E9ED;margin-bottom: 5px;}
+hr.x_line{margin-top:5px;margin-bottom:5px;border:0;border-top:2px solid #E6E9ED}
+.right_col{color: #000000;}
+.fixed_w_721{width: 721px;}
+.table-nobordered {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+.table-nobordered > thead > tr > th,
+.table-nobordered > tbody > tr > th,
+.table-nobordered > tfoot > tr > th,
+.table-nobordered > thead > tr > td,
+.table-nobordered > tbody > tr > td,
+.table-nobordered > tfoot > tr > td {
+    padding: 2px;
+    vertical-align: middle;
+    border: none;
+}
+.table-nobordered > thead > tr > th {
+    vertical-align: middle;
+    border-bottom: 2px solid #ddd;
+}
+.table-nobordered > caption + thead > tr:first-child > th,
+.table-nobordered > colgroup + thead > tr:first-child > th,
+.table-nobordered > thead:first-child > tr:first-child > th,
+.table-nobordered > caption + thead > tr:first-child > td,
+.table-nobordered > colgroup + thead > tr:first-child > td,
+.table-nobordered > thead:first-child > tr:first-child > td {
+    border-top: 0;
+}
+.table-nobordered > tbody + tbody {
+    border-top: 2px solid #ddd;
+}
+.table-nobordered {
+    background-color: #fff;
+}
+.tablecustom{width: 100%;max-width: 100%;margin-bottom: 10px;}
+.tablecustom > thead > tr > th{text-align: center; border: 1px solid #ddd;}
+.tablecustom > tbody > tr > td{border-left: 1px solid #ddd; border-right: 1px solid #ddd;}
+.tablecustom > tbody > tr > td:not(.nobottom){border-top: 1px solid #ddd;}
+.tablecustom > tbody > tr > td.nobottom{border-top: none;}
+.tablecustom > tbody > tr > td.rightalign{text-align: right;}
+.tablecustom > thead > tr > th,
+.tablecustom > tbody > tr > th,
+.tablecustom > tfoot > tr > th,
+.tablecustom > thead > tr > td,
+.tablecustom > tbody > tr > td,
+.tablecustom > tfoot > tr > td {padding: 2px;vertical-align: middle;}
+.tablecustom > tbody > tr:last-child{border-bottom: 1px solid #ddd;}
+.tablecustom > thead > tr > td.info,
+.tablecustom > tbody > tr > td.info,
+.tablecustom > tfoot > tr > td.info,
+.tablecustom > thead > tr > th.info,
+.tablecustom > tbody > tr > th.info,
+.tablecustom > tfoot > tr > th.info,
+.tablecustom > thead > tr.info > td,
+.tablecustom > tbody > tr.info > td,
+.tablecustom > tfoot > tr.info > td,
+.tablecustom > thead > tr.info > th,
+.tablecustom > tbody > tr.info > th,
+.tablecustom > tfoot > tr.info > th {background-color: #d9edf7;}
+.table td.fit,.table th.fit {white-space: nowrap;width: 1%;}
+.table.table-centeredhead>thead>tr>th,.table.table-centeredhead>tbody>tr>th{vertical-align:middle;text-align: center;}
+.table>tbody>tr>td.centertext{text-align: center;}
+#myModalXlg .modal-dialog,#modal-xlg .modal-dialog {width:95%;}
+.tabledip > tbody > tr > td {
+    font-size: 90%;
+}
+.tabledip > tbody > tr > td p{
+    margin: 0;
+    padding: 0;
+}
+.tabledip > tbody > tr > td p.small{
+    font-size: 80%;
+}
+.tabledip > tbody > tr > td a{
+    color: #666666;
+}
+.tabledip > tbody > tr > td a:hover{
+    color: #C20001;
+}
+.tabledip > tbody > tr > td ol{
+    margin-left: 15px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+.sm-radio{
+    position: relative;
+    display: block;
+    margin-top: 2px;
+    margin-bottom: 16px;
+}
+.sm-radio label{
+    min-height: 20px;
+    padding-right: 20px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+.form-control-feedback.sm-input{
+    margin-top: 0;
+}
