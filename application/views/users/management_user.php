@@ -60,12 +60,12 @@
 </script>
 <script type="text/javascript">
     function Aktifkan(id_admin) {
-        let yes = 'Y';
+        let yes = 1;
         window.location.href = "<?php echo site_url('aktivasi_user'); ?>/" + id_admin + "/" + yes;
     }
 
     function Nonaktifkan(id_admin) {
-        let no = 'N';
+        let no = 0;
         window.location.href = "<?php echo site_url('aktivasi_user'); ?>/" + id_admin + "/" + no;
     }
 </script>

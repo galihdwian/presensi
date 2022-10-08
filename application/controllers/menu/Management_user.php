@@ -48,7 +48,7 @@ class Management_user extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-danger">Proses Gagal</div>');
         }
 
-        redirect('admin/management_user');
+        redirect('management_user');
     }
 
     function tambah_user()

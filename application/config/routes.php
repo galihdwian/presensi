@@ -60,4 +60,4 @@ $route['logout'] = 'login/logout';
 $route['dashboard'] = 'dashboard';
 $route['management_user'] = 'menu/management_user';
 $route['user_tambah'] = 'menu/management_user/tambah_user';
-$route['aktivasi_user'] = 'menu/management_user/status_aktivasi_user';
+$route['aktivasi_user/(:any)/(:any)'] = 'menu/management_user/status_aktivasi_user/$1/$2';
