@@ -3,13 +3,13 @@ if (!empty($error)) {
     echo '<div class="alert alert-danger">' . $error . '</div>';
 }
 $attributes = array('data-toggle' => 'validator', 'role' => 'form');
-echo form_open('dosen_edit/' . $get_dosen->id_dsn, $attributes);
+echo form_open('ruangan_tambah', $attributes);
 ?>
 <div class="row">
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h2>Edit Data Dosen</h2>
+                <h2>Tambah Data Ruangan</h2>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
@@ -18,16 +18,20 @@ echo form_open('dosen_edit/' . $get_dosen->id_dsn, $attributes);
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group has-feedback">
-                                    <label>NIP</label>
-                                    <input type="text" class="form-control input-sm" value="<?= $get_dosen->nip ?>" name="nip" autocomplete="off" autofocus autocapitalize="true" required="true">
+                                    <label>Nama Ruangan</label>
+                                    <input type="text" class="form-control input-sm" name="nm_ruangan" autocomplete="off" autofocus autocapitalize="true" required="true">
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 </div>
                                 <div class="form-group has-feedback">
-                                    <label>Nama Dosen</label>
-                                    <input type="text" class="form-control input-sm" value="<?= $get_dosen->nama_dsn ?>" name="nama_dsn" autocomplete="off" autofocus autocapitalize="true" required="true">
+                                    <label>Longitude</label>
+                                    <input type="text" class="form-control input-sm" name="longitude" autocomplete="off" autofocus autocapitalize="true" required="true">
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 </div>
-
+                                <div class="form-group has-feedback">
+                                    <label>Latitude</label>
+                                    <input type="text" class="form-control input-sm" name="latitude" id="password" autocomplete="off" autofocus autocapitalize="true" required="true">
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
                             </div>
                         </div>
                         <div class="ln_solid"></div>

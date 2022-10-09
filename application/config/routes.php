@@ -85,3 +85,13 @@ $route['matkul_hapus/(:any)'] = 'menu/matkul/hapus_matkul/$1';
 $route['matkul_detail/(:any)'] = 'menu/matkul/detail_matkul/$1';
 $route['matkul_hapus_detail/(:any)/(:any)'] = 'menu/matkul/detail_matkul_hapus/$1/$2';
 $route['matkul_detail_tambah/(:any)'] = 'menu/matkul/detail_matkul_tambah/$1';
+
+$route['ruangan'] = 'menu/ruangan';
+$route['ruangan_tambah'] = 'menu/ruangan/tambah_ruangan';
+$route['ruangan_edit/(:any)'] = 'menu/ruangan/edit_ruangan/$1';
+$route['ruangan_hapus/(:any)'] = 'menu/ruangan/hapus_ruangan/$1';
+
+$route['pertemuan'] = 'menu/pertemuan';
+$route['pertemuan_tambah'] = 'menu/pertemuan/tambah_pertemuan';
+$route['pertemuan_edit/(:any)'] = 'menu/pertemuan/edit_pertemuan/$1';
+$route['pertemuan_hapus/(:any)'] = 'menu/pertemuan/hapus_pertemuan/$1';

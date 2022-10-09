@@ -66,20 +66,10 @@
                                         <li><a href="<?= site_url('dosen'); ?>">Dosen</a></li>
                                         <li><a href="<?= site_url('mahasiswa'); ?>">Mahasiswa</a></li>
                                         <li><a href="<?= site_url('matkul'); ?>">Mata Kuliah</a></li>
+                                        <li><a href="<?= site_url('ruangan'); ?>">Ruangan</a></li>
+                                        <li><a href="<?= site_url('pertemuan'); ?>">Pertemuan</a></li>
                                     </ul>
                                 </li>
-
-
-                                <!-- <li><a><i class="fa fa-institution"></i> Komkordik <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu" style="display: none">
-                                        <li><a href="<?= site_url('admin/strukturorganisasi'); ?>">Struktur Organisasi</a></li>
-                                        <li><a href="<?= site_url('admin/sk_komkordik'); ?>">SK Komkordik</a></li>
-                                        <li><a href="<?= site_url('admin/ppdtp_fk_unsoed'); ?>">PPDTP FK Unsoed</a></li>
-                                    </ul>
-                                </li> -->
-                                <!-- <li><a href="<?= site_url('admin/kegiatan'); ?>"><i class="fa fa-pencil"></i> Kegiatan</a></li>
-                                <li><a href="<?= site_url('admin/pesertadidik'); ?>"><i class="fa fa-user"></i> Peserta Didik</a></li>
-                                <li><a href="<?= site_url('admin/gallery'); ?>"><i class="fa fa-photo"></i> Gallery</a></li> -->
                                 <li><a href="<?= site_url('logout'); ?>"><i class="fa fa-power-off"></i> Log Out</a></li>
                             </ul>
                         </div>
@@ -180,9 +170,33 @@
                     case 'tambah_detail_matkul':
                         include 'matkul/tambah_detail_matkul.php';
                         break;
-
-
                         //end of matkul modul
+                    case 'ruangan':
+                        include 'ruangan/ruangan.php';
+                        break;
+                    case 'tambah_ruangan':
+                        include 'ruangan/tambah_ruangan.php';
+                        break;
+                    case 'edit_ruangan':
+                        include 'ruangan/edit_ruangan.php';
+                        break;
+                    case 'hapus_ruangan':
+                        include 'ruangan/hapus_ruangan.php';
+                        break;
+                        //end of ruangan modul
+                    case 'pertemuan':
+                        include 'pertemuan/pertemuan.php';
+                        break;
+                    case 'tambah_pertemuan':
+                        include 'pertemuan/tambah_pertemuan.php';
+                        break;
+                    case 'edit_pertemuan':
+                        include 'pertemuan/edit_pertemuan.php';
+                        break;
+                    case 'hapus_pertemuan':
+                        include 'pertemuan/hapus_pertemuan.php';
+                        break;
+                        //end of pertemuan modul
                 }
                 ?>
                 <!-- footer content -->
