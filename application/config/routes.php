@@ -95,3 +95,7 @@ $route['pertemuan'] = 'menu/pertemuan';
 $route['pertemuan_tambah'] = 'menu/pertemuan/tambah_pertemuan';
 $route['pertemuan_edit/(:any)'] = 'menu/pertemuan/edit_pertemuan/$1';
 $route['pertemuan_hapus/(:any)'] = 'menu/pertemuan/hapus_pertemuan/$1';
+
+$route['presensi'] = 'menu/presensi';
+$route['presensi_detail_pertemuan/(:any)'] = 'menu/presensi/pertemuan_detail/$1';
+$route['detail_absen/(:any)'] = 'menu/presensi/absen_detail/$1';

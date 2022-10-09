@@ -44,6 +44,19 @@ echo form_open('pertemuan_edit/' . $get_pertemuan->id_pertemuan, $attributes);
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 </div>
                                 <div class="form-group has-feedback">
+                                    <label>Ruangan</label>
+                                    <?php
+                                    $options[''] = '- Pilih -';
+                                    foreach ($get_list_ruangan as $r) :
+                                        $options[$r->id_ruangan] = $r->nm_ruangan;
+                                    endforeach;
+                                    unset($r);
+                                    echo form_dropdown('id_ruangan', $options, $get_pertemuan->id_ruangan, 'class="form-control input-sm" tabindex="2" required  autocomplete="off"');
+                                    unset($options);
+                                    ?>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
+                                <div class="form-group has-feedback">
                                     <label>Pertemuan Ke</label>
                                     <input type="number" class="form-control input-sm" value="<?= $get_pertemuan->pertemuanke ?>" name="pertemuanke" id="pertemuanke" autocomplete="off" autofocus autocapitalize="true" required="true">
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>

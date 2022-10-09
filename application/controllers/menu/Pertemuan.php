@@ -7,6 +7,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * @property pertemuan_model $pertemuan_model
  * @property dosen_model $dosen_model
  * @property matkul_model $matkul_model
+ * @property ruangan_model $ruangan_model
  */
 
 class Pertemuan extends CI_Controller
@@ -19,6 +20,7 @@ class Pertemuan extends CI_Controller
         $this->load->model("pertemuan_model");
         $this->load->model("dosen_model");
         $this->load->model("matkul_model");
+        $this->load->model("ruangan_model");
         $this->is_logged_in();
     }
 
@@ -45,6 +47,7 @@ class Pertemuan extends CI_Controller
             $data['page'] = 'tambah_pertemuan';
             $data['get_list_dosen'] = $this->dosen_model->getListDosen();
             $data['get_list_matkul'] = $this->matkul_model->getListMatkul();
+            $data['get_list_ruangan'] = $this->ruangan_model->getListRuangan();
             $this->load->view('dashboard_admin_layout', $data);
         } else {
             $this->form_validation->set_rules('id_dsn', 'Nama Dosen Pengampu', 'required');
@@ -52,11 +55,13 @@ class Pertemuan extends CI_Controller
             $this->form_validation->set_rules('pertemuanke', 'Pertemuan Ke', 'required');
             $this->form_validation->set_rules('waktu_mulai', 'Waktu Mulai', 'required');
             $this->form_validation->set_rules('waktu_selesai', 'Waktu Selesai', 'required');
+            $this->form_validation->set_rules('id_ruangan', 'Ruangan', 'required');
             if ($this->form_validation->run($this) == FALSE) {
                 $data['titlepage'] = 'Tambah Pertemuan';
                 $data['page'] = 'tambah_pertemuan';
                 $data['get_list_dosen'] = $this->dosen_model->getListDosen();
                 $data['get_list_matkul'] = $this->matkul_model->getListMatkul();
+                $data['get_list_ruangan'] = $this->ruangan_model->getListRuangan();
                 $data['error'] = validation_errors();
                 $this->load->view('dashboard_admin_layout', $data);
             } else {
@@ -68,6 +73,7 @@ class Pertemuan extends CI_Controller
                 $waktu_selesai = $this->input->post('waktu_selesai');
                 $pkok_bahasan = $this->input->post('pkok_bahasan');
                 $sub_pkokbhasan = $this->input->post('sub_pkokbhasan');
+                $id_ruangan = $this->input->post('id_ruangan');
 
                 $save['id_dsn'] = $id_dsn;
                 $save['id_matkul'] = $id_matkul;
@@ -76,6 +82,7 @@ class Pertemuan extends CI_Controller
                 $save['waktu_selesai'] = $waktu_selesai;
                 $save['pkok_bahasan'] = $pkok_bahasan;
                 $save['sub_pkokbhasan'] = $sub_pkokbhasan;
+                $save['id_ruangan'] = $id_ruangan;
 
                 $hasil = $this->pertemuan_model->_tambah_Pertemuan($save);
                 if ($hasil == true) {
@@ -98,6 +105,7 @@ class Pertemuan extends CI_Controller
             $data['page'] = 'edit_pertemuan';
             $data['get_list_dosen'] = $this->dosen_model->getListDosen();
             $data['get_list_matkul'] = $this->matkul_model->getListMatkul();
+            $data['get_list_ruangan'] = $this->ruangan_model->getListRuangan();
             $data['get_pertemuan'] = $this->pertemuan_model->getPertemuan($id_pertemuan);
             $this->load->view('dashboard_admin_layout', $data);
         } else {
@@ -106,11 +114,13 @@ class Pertemuan extends CI_Controller
             $this->form_validation->set_rules('pertemuanke', 'Pertemuan Ke', 'required');
             $this->form_validation->set_rules('waktu_mulai', 'Waktu Mulai', 'required');
             $this->form_validation->set_rules('waktu_selesai', 'Waktu Selesai', 'required');
+            $this->form_validation->set_rules('id_ruangan', 'Ruangan', 'required');
             if ($this->form_validation->run($this) == FALSE) {
                 $data['titlepage'] = 'Edit Pertemuan';
                 $data['page'] = 'edit_pertemuan';
                 $data['get_list_dosen'] = $this->dosen_model->getListDosen();
                 $data['get_list_matkul'] = $this->matkul_model->getListMatkul();
+                $data['get_list_ruangan'] = $this->ruangan_model->getListRuangan();
                 $data['get_pertemuan'] = $this->pertemuan_model->getPertemuan($id_pertemuan);
                 $data['error'] = validation_errors();
                 $this->load->view('dashboard_admin_layout', $data);
@@ -123,6 +133,8 @@ class Pertemuan extends CI_Controller
                 $waktu_selesai = $this->input->post('waktu_selesai');
                 $pkok_bahasan = $this->input->post('pkok_bahasan');
                 $sub_pkokbhasan = $this->input->post('sub_pkokbhasan');
+                $id_ruangan = $this->input->post('id_ruangan');
+
 
                 $update['id_dsn'] = $id_dsn;
                 $update['id_matkul'] = $id_matkul;
@@ -131,6 +143,7 @@ class Pertemuan extends CI_Controller
                 $update['waktu_selesai'] = $waktu_selesai;
                 $update['pkok_bahasan'] = $pkok_bahasan;
                 $update['sub_pkokbhasan'] = $sub_pkokbhasan;
+                $update['id_ruangan'] = $id_ruangan;
 
                 $hasil = $this->pertemuan_model->_update_pertemuan($id_pertemuan, $update);
                 if ($hasil == true) {

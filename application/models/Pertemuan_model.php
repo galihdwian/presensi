@@ -16,6 +16,7 @@ class Pertemuan_model extends CI_Model
         $this->db->from("pertemuan a");
         $this->db->join("dosen b", "a.id_dsn=b.id_dsn", "LEFT");
         $this->db->join("matkul c", "a.id_matkul=c.id_matkul", "LEFT");
+        $this->db->join("ruangan d", "a.id_ruangan=d.id_ruangan", "LEFT");
         return $this->db->get()->result();
     }
 
@@ -43,5 +44,17 @@ class Pertemuan_model extends CI_Model
         $this->db->where("id_pertemuan", $id_pertemuan);
         $this->db->delete('pertemuan');
         return true;
+    }
+
+    //detail pertebuan by id matkul
+    function getListPertemuanbymatkul($id_matkul)
+    {
+        $this->db->select("*");
+        $this->db->from("pertemuan a");
+        $this->db->join("dosen b", "a.id_dsn=b.id_dsn", "LEFT");
+        $this->db->join("matkul c", "a.id_matkul=c.id_matkul", "LEFT");
+        $this->db->join("ruangan d", "a.id_ruangan=d.id_ruangan", "LEFT");
+        $this->db->where("a.id_matkul", $id_matkul);
+        return $this->db->get()->result();
     }
 }

@@ -70,6 +70,7 @@
                                         <li><a href="<?= site_url('pertemuan'); ?>">Pertemuan</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="<?= site_url('presensi'); ?>"><i class="fa fa-folder-open"></i>Presensi</a></li>
                                 <li><a href="<?= site_url('logout'); ?>"><i class="fa fa-power-off"></i> Log Out</a></li>
                             </ul>
                         </div>
@@ -197,6 +198,17 @@
                         include 'pertemuan/hapus_pertemuan.php';
                         break;
                         //end of pertemuan modul
+                    case 'presensi':
+                        include 'presensi/presensi.php';
+                        break;
+                    case 'detail_pertemuan':
+                        include 'presensi/detail_presensi_pertemuan.php';
+                        break;
+                    case 'detail_absen':
+                        include 'presensi/detail_absen.php';
+                        break;
+                        //end of Presensi modul
+
                 }
                 ?>
                 <!-- footer content -->
