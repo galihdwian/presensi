@@ -39,6 +39,32 @@ echo form_open('mahasiswa_edit/' . $get_mahasiswa->id_mhs, $attributes);
                                     ?>
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 </div>
+                                <div class="form-group">
+                                    <label>Jenis Kelamin</label><br>
+                                    <?php
+                                    if ($get_mahasiswa->jns_kelamin == 'L') {
+                                    ?>
+                                        <input type="radio" name="jns_kelamin" value="L" checked>Laki-laki&nbsp;
+                                        <input type="radio" name="jns_kelamin" value="P">Perempuan
+                                    <?php
+                                    } else {
+                                    ?>
+                                        <input type="radio" name="jns_kelamin" value="L" checked>Laki-laki&nbsp;
+                                        <input type="radio" name="jns_kelamin" value="P" checked>Perempuan
+                                    <?php
+                                    }
+                                    ?>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label>Tanggal Lahir</label>
+                                    <input type="date" class="form-control input-sm" value="<?= $get_mahasiswa->tgl_lahir ?>" name="tgl_lahir" autocomplete="off" autofocus autocapitalize="true" required="true">
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label>Alamat</label>
+                                    <input type="text" class="form-control input-sm" value="<?= $get_mahasiswa->alamat ?>" name="alamat" autocomplete="off" autofocus autocapitalize="true" required="true">
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
                             </div>
                         </div>
                         <div class="ln_solid"></div>

@@ -19,6 +19,7 @@
                             <th>No</th>
                             <th>NIP</th>
                             <th>Nama Dosen</th>
+                            <th>Alamat</th>
                             <th>Status</th>
                             <th>Aksi</th>
                         </tr>
@@ -32,6 +33,7 @@
                             echo '<td class="fit">' . $no . '</td>';
                             echo '<td>' . $r->nip . '</td>';
                             echo '<td>' . $r->nama_dsn . '</td>';
+                            echo '<td>' . $r->alamat . '</td>';
                             echo '<td>' . $status  . '</td>';
                             echo '<td class="fit">';
                         ?>

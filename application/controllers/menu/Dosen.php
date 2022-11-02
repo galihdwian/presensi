@@ -61,6 +61,7 @@ class Dosen extends CI_Controller
             $this->form_validation->set_rules('nama_dsn', 'Nama Dosen', 'required');
             $this->form_validation->set_rules('password', 'Password', 'required');
             $this->form_validation->set_rules('password_confirmation', 'Konfirmasi Password', 'required|matches[password]');
+            $this->form_validation->set_rules('alamat', 'Alamat', 'required');
             if ($this->form_validation->run($this) == FALSE) {
                 $data['titlepage'] = 'Tambah Dosen';
                 $data['page'] = 'tambah_dosen';
@@ -71,12 +72,14 @@ class Dosen extends CI_Controller
                 $nip = $this->input->post('nip');
                 $nama_dsn = $this->input->post('nama_dsn');
                 $password = $this->input->post('password');
+                $alamat = $this->input->post('alamat');
 
                 $pwd = md5($password);
                 $pwd2 = password_hash($pwd, PASSWORD_DEFAULT);
 
                 $save['nip'] = $nip;
                 $save['nama_dsn'] = $nama_dsn;
+                $save['alamat'] = $alamat;
                 $save['password'] = $pwd2;
                 $save['stts_dsn'] = 1;
 
@@ -104,6 +107,7 @@ class Dosen extends CI_Controller
         } else {
             $this->form_validation->set_rules('nip', 'NIP', 'required');
             $this->form_validation->set_rules('nama_dsn', 'Nama Dosen', 'required');
+            $this->form_validation->set_rules('alamat', 'Alamat', 'required');
             if ($this->form_validation->run($this) == FALSE) {
                 $data['titlepage'] = 'Tambah Dosen';
                 $data['page'] = 'tambah_dosen';
@@ -114,9 +118,11 @@ class Dosen extends CI_Controller
                 unset($data);
                 $nip = $this->input->post('nip');
                 $nama_dsn = $this->input->post('nama_dsn');
+                $alamat = $this->input->post('alamat');
 
                 $update['nip'] = $nip;
                 $update['nama_dsn'] = $nama_dsn;
+                $update['alamat'] = $alamat;
 
                 $hasil = $this->dosen_model->_update_dosen($id_dsn, $update);
                 if ($hasil == true) {

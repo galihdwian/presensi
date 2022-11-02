@@ -38,6 +38,11 @@ echo form_open('dosen_tambah', $attributes);
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                     <div class="help-block with-errors" id='message'></div>
                                 </div>
+                                <div class="form-group has-feedback">
+                                    <label>Alamat</label>
+                                    <input type="text" class="form-control input-sm" name="alamat" autocomplete="off" autofocus autocapitalize="true" required="true">
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
 
                             </div>
                         </div>

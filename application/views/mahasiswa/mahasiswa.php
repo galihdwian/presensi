@@ -19,6 +19,7 @@
                             <th>No</th>
                             <th>NIM</th>
                             <th>Nama Mahasiswa</th>
+                            <th>Alamat</th>
                             <th>Jurusan</th>
                             <th>Status</th>
                             <th>Aksi</th>
@@ -33,6 +34,7 @@
                             echo '<td class="fit">' . $no . '</td>';
                             echo '<td>' . $r->nim . '</td>';
                             echo '<td>' . $r->nama_mhs . '</td>';
+                            echo '<td>' . $r->alamat . '</td>';
                             echo '<td>' . $r->nama_jurusan . '</td>';
                             echo '<td>' . $status  . '</td>';
                             echo '<td class="fit">';

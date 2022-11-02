@@ -18,6 +18,11 @@ echo form_open('matkul_edit/' . $get_matkul->id_matkul, $attributes);
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group has-feedback">
+                                    <label>Kode Mata Kuliah</label>
+                                    <input type="text" class="form-control input-sm" value="<?= $get_matkul->kode_matkul ?>" name="kode_matkul" autocomplete="off" autofocus autocapitalize="true" required="true">
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
+                                <div class="form-group has-feedback">
                                     <label>Nama Mata Kuliah</label>
                                     <input type="text" class="form-control input-sm" value="<?= $get_matkul->nm_matkul ?>" name="nm_matkul" autocomplete="off" autofocus autocapitalize="true" required="true">
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>

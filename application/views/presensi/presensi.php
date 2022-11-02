@@ -5,9 +5,9 @@
                 <h2>List Presensi</h2>
                 <div class="nav navbar-right panel_toolbox">
                     <div class="dropdown">
-                        <a href="<?= site_url('matkul_tambah'); ?>" class="btn btn-primary">
+                        <!-- <a href="<?= site_url('matkul_tambah'); ?>" class="btn btn-primary">
                             Tambah
-                        </a>
+                        </a> -->
                     </div>
                 </div>
                 <div class="clearfix"></div>

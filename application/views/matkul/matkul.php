@@ -17,6 +17,7 @@
                     <thead>
                         <tr class="info">
                             <th>No</th>
+                            <th>Kode Matkul</th>
                             <th>Nama Matkul</th>
                             <th>Dosen Pengampu</th>
                             <th>SKS</th>
@@ -29,6 +30,7 @@
                         foreach ($list_matkul as $r) :
                             echo '<tr>';
                             echo '<td class="fit">' . $no . '</td>';
+                            echo '<td>' . $r->kode_matkul . '</td>';
                             echo '<td>' . $r->nm_matkul . '</td>';
                             echo '<td>' . $r->nama_dsn . '</td>';
                             echo '<td>' . $r->sks . '</td>';

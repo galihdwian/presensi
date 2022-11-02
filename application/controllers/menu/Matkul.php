@@ -46,6 +46,7 @@ class Matkul extends CI_Controller
             $data['get_list_dosen'] = $this->dosen_model->getListDosen();
             $this->load->view('dashboard_admin_layout', $data);
         } else {
+            $this->form_validation->set_rules('kode_matkul', 'Kode Mata Kuliah', 'required');
             $this->form_validation->set_rules('nm_matkul', 'Nama Mata Kuliah', 'required');
             $this->form_validation->set_rules('id_dsn', 'Nama Dosen', 'required');
             $this->form_validation->set_rules('sks', 'SKS', 'required');
@@ -57,10 +58,12 @@ class Matkul extends CI_Controller
                 $this->load->view('dashboard_admin_layout', $data);
             } else {
                 unset($data);
+                $kode_matkul = $this->input->post('kode_matkul');
                 $nm_matkul = $this->input->post('nm_matkul');
                 $id_dsn = $this->input->post('id_dsn');
                 $sks = $this->input->post('sks');
 
+                $save['kode_matkul'] = $kode_matkul;
                 $save['nm_matkul'] = $nm_matkul;
                 $save['id_dsn'] = $id_dsn;
                 $save['sks'] = $sks;
@@ -88,6 +91,7 @@ class Matkul extends CI_Controller
             $data['get_list_dosen'] = $this->dosen_model->getListDosen();
             $this->load->view('dashboard_admin_layout', $data);
         } else {
+            $this->form_validation->set_rules('kode_matkul', 'Kode Mata Kuliah', 'required');
             $this->form_validation->set_rules('nm_matkul', 'Nama Mata Kuliah', 'required');
             $this->form_validation->set_rules('id_dsn', 'Nama Dosen', 'required');
             $this->form_validation->set_rules('sks', 'SKS', 'required');
@@ -100,10 +104,12 @@ class Matkul extends CI_Controller
                 $this->load->view('dashboard_admin_layout', $data);
             } else {
                 unset($data);
+                $kode_matkul = $this->input->post('kode_matkul');
                 $nm_matkul = $this->input->post('nm_matkul');
                 $id_dsn = $this->input->post('id_dsn');
                 $sks = $this->input->post('sks');
 
+                $update['kode_matkul'] = $kode_matkul;
                 $update['nm_matkul'] = $nm_matkul;
                 $update['id_dsn'] = $id_dsn;
                 $update['sks'] = $sks;

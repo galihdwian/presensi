@@ -27,6 +27,11 @@ echo form_open('dosen_edit/' . $get_dosen->id_dsn, $attributes);
                                     <input type="text" class="form-control input-sm" value="<?= $get_dosen->nama_dsn ?>" name="nama_dsn" autocomplete="off" autofocus autocapitalize="true" required="true">
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 </div>
+                                <div class="form-group has-feedback">
+                                    <label>Alamat</label>
+                                    <input type="text" class="form-control input-sm" value="<?= $get_dosen->alamat ?>" name="alamat" autocomplete="off" autofocus autocapitalize="true" required="true">
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
 
                             </div>
                         </div>
