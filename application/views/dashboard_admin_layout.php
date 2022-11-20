@@ -71,7 +71,14 @@
                                         <li><a href="<?= site_url('pertemuan'); ?>">Pertemuan</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="<?= site_url('presensi'); ?>"><i class="fa fa-folder-open"></i>Presensi</a></li>
+                                <li><a href="<?= site_url('presensi'); ?>"><i class="fa fa-folder"></i>Presensi</a></li>
+                                <li><a><i class="fa fa-folder-open"></i> Rekap <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="<?= site_url('r_pertemuan_mahasiswa'); ?>">Rekap Pertemuan Mahasiswa</a></li>
+                                        <li><a href="<?= site_url('r_presensi_mahasiswa'); ?>">Rekap Presensi Mahasiswa</a></li>
+                                        <li><a href="<?= site_url('r_dosen'); ?>">Rekap Dosen</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="<?= site_url('logout'); ?>"><i class="fa fa-power-off"></i> Log Out</a></li>
                             </ul>
                         </div>
@@ -219,6 +226,16 @@
                         include 'periode/edit_periode.php';
                         break;
                         //end of Periode modul
+                    case 'r_pertemuan_mahasiswa':
+                        include 'rekap/r_pertemuan_mahasiswa.php';
+                        break;
+                    case 'r_presensi_mahasiswa':
+                        include 'rekap/r_presensi_mahasiswa.php';
+                        break;
+                    case 'r_dosen':
+                        include 'rekap/r_dosen.php';
+                        break;
+                        //end of Rekap modul
 
                 }
                 ?>

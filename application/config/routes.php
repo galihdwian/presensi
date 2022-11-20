@@ -104,3 +104,9 @@ $route['pertemuan_hapus/(:any)'] = 'menu/pertemuan/hapus_pertemuan/$1';
 $route['presensi'] = 'menu/presensi';
 $route['presensi_detail_pertemuan/(:any)'] = 'menu/presensi/pertemuan_detail/$1';
 $route['detail_absen/(:any)'] = 'menu/presensi/absen_detail/$1';
+
+
+
+$route['r_pertemuan_mahasiswa'] = 'menu/rekap/r_pertemuan_mahasiswa';
+$route['r_presensi_mahasiswa'] = 'menu/rekap/r_presensi_mahasiswa';
+$route['r_dosen'] = 'menu/rekap/r_dosen';

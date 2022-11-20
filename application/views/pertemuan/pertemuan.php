@@ -17,13 +17,12 @@
                     <thead>
                         <tr class="info">
                             <th>No</th>
+                            <th>Periode</th>
                             <th>Nama Matkul</th>
                             <th>Nama Dosen Pengampu</th>
                             <th>Pertemuan Ke</th>
                             <th>Waktu mulai</th>
                             <th>Waktu Selesai</th>
-                            <th>Pokok Bahasan</th>
-                            <th>Sub Pokok Bahasan</th>
                             <th>Ruangan</th>
                             <th>Aksi</th>
                         </tr>
@@ -34,13 +33,12 @@
                         foreach ($list_pertemuan as $r) :
                             echo '<tr>';
                             echo '<td class="fit">' . $no . '</td>';
+                            echo '<td>' . $r->tahun_periode . ' - ' . $r->semester . '</td>';
                             echo '<td>' . $r->nm_matkul . '</td>';
                             echo '<td>' . $r->nama_dsn . '</td>';
                             echo '<td>' . $r->pertemuanke  . '</td>';
                             echo '<td>' . $r->waktu_mulai  . '</td>';
                             echo '<td>' . $r->waktu_selesai  . '</td>';
-                            echo '<td>' . $r->pkok_bahasan  . '</td>';
-                            echo '<td>' . $r->sub_pkokbhasan  . '</td>';
                             echo '<td>' . $r->nm_ruangan  . '</td>';
                             echo '<td class="fit">';
                         ?>

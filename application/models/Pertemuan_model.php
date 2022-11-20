@@ -17,6 +17,8 @@ class Pertemuan_model extends CI_Model
         $this->db->join("dosen b", "a.id_dsn=b.id_dsn", "LEFT");
         $this->db->join("matkul c", "a.id_matkul=c.id_matkul", "LEFT");
         $this->db->join("ruangan d", "a.id_ruangan=d.id_ruangan", "LEFT");
+        $this->db->join("periode e", "a.id_periode=e.id_periode", "LEFT");
+        $this->db->order_by("e.id_periode", "DESC");
         return $this->db->get()->result();
     }
 
@@ -54,7 +56,9 @@ class Pertemuan_model extends CI_Model
         $this->db->join("dosen b", "a.id_dsn=b.id_dsn", "LEFT");
         $this->db->join("matkul c", "a.id_matkul=c.id_matkul", "LEFT");
         $this->db->join("ruangan d", "a.id_ruangan=d.id_ruangan", "LEFT");
+        $this->db->join("periode e", "a.id_periode=e.id_periode", "LEFT");
         $this->db->where("a.id_matkul", $id_matkul);
+        $this->db->order_by("e.id_periode", "DESC");
         return $this->db->get()->result();
     }
 }

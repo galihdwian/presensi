@@ -3,7 +3,7 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
- * Description of Dosen_model
+ * Description of Periode_model
  *
  * @author UNICORN
  */

@@ -8,6 +8,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * @property dosen_model $dosen_model
  * @property matkul_model $matkul_model
  * @property ruangan_model $ruangan_model
+ * @property periode_model $periode_model
  */
 
 class Pertemuan extends CI_Controller
@@ -21,6 +22,7 @@ class Pertemuan extends CI_Controller
         $this->load->model("dosen_model");
         $this->load->model("matkul_model");
         $this->load->model("ruangan_model");
+        $this->load->model("periode_model");
         $this->is_logged_in();
     }
 
@@ -48,8 +50,10 @@ class Pertemuan extends CI_Controller
             $data['get_list_dosen'] = $this->dosen_model->getListDosen();
             $data['get_list_matkul'] = $this->matkul_model->getListMatkul();
             $data['get_list_ruangan'] = $this->ruangan_model->getListRuangan();
+            $data['get_list_periode'] = $this->periode_model->getListPeriode();
             $this->load->view('dashboard_admin_layout', $data);
         } else {
+            $this->form_validation->set_rules('id_periode', 'Periode', 'required');
             $this->form_validation->set_rules('id_dsn', 'Nama Dosen Pengampu', 'required');
             $this->form_validation->set_rules('id_matkul', 'Nama Mata Kuliah', 'required');
             $this->form_validation->set_rules('pertemuanke', 'Pertemuan Ke', 'required');
@@ -62,10 +66,12 @@ class Pertemuan extends CI_Controller
                 $data['get_list_dosen'] = $this->dosen_model->getListDosen();
                 $data['get_list_matkul'] = $this->matkul_model->getListMatkul();
                 $data['get_list_ruangan'] = $this->ruangan_model->getListRuangan();
+                $data['get_list_periode'] = $this->periode_model->getListPeriode();
                 $data['error'] = validation_errors();
                 $this->load->view('dashboard_admin_layout', $data);
             } else {
                 unset($data);
+                $id_periode = $this->input->post('id_periode');
                 $id_dsn = $this->input->post('id_dsn');
                 $id_matkul = $this->input->post('id_matkul');
                 $pertemuanke = $this->input->post('pertemuanke');
@@ -75,6 +81,7 @@ class Pertemuan extends CI_Controller
                 $sub_pkokbhasan = $this->input->post('sub_pkokbhasan');
                 $id_ruangan = $this->input->post('id_ruangan');
 
+                $save['id_periode'] = $id_periode;
                 $save['id_dsn'] = $id_dsn;
                 $save['id_matkul'] = $id_matkul;
                 $save['pertemuanke'] = $pertemuanke;
@@ -106,9 +113,11 @@ class Pertemuan extends CI_Controller
             $data['get_list_dosen'] = $this->dosen_model->getListDosen();
             $data['get_list_matkul'] = $this->matkul_model->getListMatkul();
             $data['get_list_ruangan'] = $this->ruangan_model->getListRuangan();
+            $data['get_list_periode'] = $this->periode_model->getListPeriode();
             $data['get_pertemuan'] = $this->pertemuan_model->getPertemuan($id_pertemuan);
             $this->load->view('dashboard_admin_layout', $data);
         } else {
+            $this->form_validation->set_rules('id_periode', 'Periode', 'required');
             $this->form_validation->set_rules('id_dsn', 'Nama Dosen Pengampu', 'required');
             $this->form_validation->set_rules('id_matkul', 'Nama Mata Kuliah', 'required');
             $this->form_validation->set_rules('pertemuanke', 'Pertemuan Ke', 'required');
@@ -121,11 +130,13 @@ class Pertemuan extends CI_Controller
                 $data['get_list_dosen'] = $this->dosen_model->getListDosen();
                 $data['get_list_matkul'] = $this->matkul_model->getListMatkul();
                 $data['get_list_ruangan'] = $this->ruangan_model->getListRuangan();
+                $data['get_list_periode'] = $this->periode_model->getListPeriode();
                 $data['get_pertemuan'] = $this->pertemuan_model->getPertemuan($id_pertemuan);
                 $data['error'] = validation_errors();
                 $this->load->view('dashboard_admin_layout', $data);
             } else {
                 unset($data);
+                $id_periode = $this->input->post('id_periode');
                 $id_dsn = $this->input->post('id_dsn');
                 $id_matkul = $this->input->post('id_matkul');
                 $pertemuanke = $this->input->post('pertemuanke');
@@ -136,6 +147,7 @@ class Pertemuan extends CI_Controller
                 $id_ruangan = $this->input->post('id_ruangan');
 
 
+                $update['id_periode'] = $id_periode;
                 $update['id_dsn'] = $id_dsn;
                 $update['id_matkul'] = $id_matkul;
                 $update['pertemuanke'] = $pertemuanke;

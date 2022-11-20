@@ -18,6 +18,19 @@ echo form_open('pertemuan_tambah', $attributes);
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group has-feedback">
+                                    <label>Periode</label>
+                                    <?php
+                                    $options[''] = '- Pilih -';
+                                    foreach ($get_list_periode as $r) :
+                                        $options[$r->id_periode] = $r->tahun_periode . ' - ' . $r->semester;
+                                    endforeach;
+                                    unset($r);
+                                    echo form_dropdown('id_periode', $options, '', 'class="form-control input-sm" tabindex="2" required  autocomplete="off"');
+                                    unset($options);
+                                    ?>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
+                                <div class="form-group has-feedback">
                                     <label>Nama Dosen Pengampu</label>
                                     <?php
                                     $options[''] = '- Pilih -';
