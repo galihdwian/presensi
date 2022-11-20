@@ -36,7 +36,7 @@
                             echo '<td>' . $r->sks . '</td>';
                             echo '<td class="fit">';
                         ?>
-                            <button class="btn btn-sm btn-success" onclick="Detail('<?php echo $r->id_matkul; ?>')">Detail</button>
+                            <!-- <button class="btn btn-sm btn-success" onclick="Detail('<?php echo $r->id_matkul; ?>')">Detail</button> -->
                             <button class="btn btn-sm btn-warning" onclick="Edit('<?php echo $r->id_matkul; ?>')">Edit</button>
                             <button class="btn btn-sm btn-danger" onclick="Hapus('<?php echo $r->id_matkul; ?>')">Hapus</button>
                         <?php

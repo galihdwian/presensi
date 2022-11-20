@@ -109,8 +109,8 @@ class Dosen extends CI_Controller
             $this->form_validation->set_rules('nama_dsn', 'Nama Dosen', 'required');
             $this->form_validation->set_rules('alamat', 'Alamat', 'required');
             if ($this->form_validation->run($this) == FALSE) {
-                $data['titlepage'] = 'Tambah Dosen';
-                $data['page'] = 'tambah_dosen';
+                $data['titlepage'] = 'Edit Dosen';
+                $data['page'] = 'edit_dosen';
                 $data['get_dosen'] = $this->dosen_model->getDosen($id_dsn);
                 $data['error'] = validation_errors();
                 $this->load->view('dashboard_admin_layout', $data);

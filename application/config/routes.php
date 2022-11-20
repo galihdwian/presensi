@@ -63,6 +63,11 @@ $route['management_user'] = 'menu/management_user';
 $route['user_tambah'] = 'menu/management_user/tambah_user';
 $route['aktivasi_user/(:any)/(:any)'] = 'menu/management_user/status_aktivasi_user/$1/$2';
 
+$route['periode'] = 'menu/periode';
+$route['periode_tambah'] = 'menu/periode/tambah_periode';
+$route['aktivasi_periode/(:any)/(:any)'] = 'menu/periode/status_aktivasi_periode/$1/$2';
+$route['periode_edit/(:any)'] = 'menu/periode/edit_periode/$1';
+
 $route['jurusan'] = 'menu/jurusan';
 $route['jurusan_tambah'] = 'menu/jurusan/tambah_jurusan';
 $route['jurusan_edit/(:any)'] = 'menu/jurusan/edit_jurusan/$1';

@@ -62,6 +62,7 @@
                                 <li><a href="<?= site_url('management_user'); ?>"><i class="fa fa-users"></i> Management User</a></li>
                                 <li><a><i class="fa fa-hospital-o"></i> Master <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
+                                        <li><a href="<?= site_url('periode'); ?>">Periode</a></li>
                                         <li><a href="<?= site_url('jurusan'); ?>">Jurusan</a></li>
                                         <li><a href="<?= site_url('dosen'); ?>">Dosen</a></li>
                                         <li><a href="<?= site_url('mahasiswa'); ?>">Mahasiswa</a></li>
@@ -208,6 +209,16 @@
                         include 'presensi/detail_absen.php';
                         break;
                         //end of Presensi modul
+                    case 'periode':
+                        include 'periode/periode.php';
+                        break;
+                    case 'tambah_periode':
+                        include 'periode/tambah_periode.php';
+                        break;
+                    case 'edit_periode':
+                        include 'periode/edit_periode.php';
+                        break;
+                        //end of Periode modul
 
                 }
                 ?>
